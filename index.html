@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BSc Nursing Study App</title>
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: #333;
+            padding: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 15px;
+            padding: 10px 15px;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        nav a:hover {
+            background-color: #4CAF50;
+        }
+
+        .container {
+            padding: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .section h2 {
+            color: #4CAF50;
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .file-list {
+            list-style-type: none;
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+        }
+
+        .file-list li {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .file-list li:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .file-list a {
+            color: #4CAF50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .file-list a:hover {
+            text-decoration: underline;
+        }
+
+        .update-feed {
+            background-color: #f9f9f9;
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .update-feed p {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .study-planner {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .study-planner input,
+        .study-planner textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .study-planner button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .study-planner button:hover {
+            background-color: #45a049;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav a {
+                margin: 5px 0;
+            }
+
+            .file-list {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>BSc Nursing Study App</h1>
+    </header>
+    <nav>
+        <a href="#subjects">Subjects</a>
+        <a href="#materials">Study Materials</a>
+        <a href="#updates">Daily Updates</a>
+        <a href="#planner">Study Planner</a>
+    </nav>
+    <div class="container">
+        <!-- Subjects Section -->
+        <section id="subjects" class="section">
+            <h2>Subjects</h2>
+            <ul class="file-list">
+                <li><a href="#">Anatomy & Physiology - Notes.pdf</a></li>
+                <li><a href="#">Sociology - PPT.pptx</a></li>
+                <li><a href="#">Psychology - Notes.pdf</a></li>
+                <li><a href="#">FON - Notes.pdf</a></li>
+            </ul>
+        </section>
+
+        <!-- Study Materials Section -->
+        <section id="materials" class="section">
+            <h2>Study Materials</h2>
+            <h3>PDFs</h3>
+            <ul class="file-list">
+                <li><a href="#">Anatomy Notes.pdf</a></li>
+                <li><a href="#">Psychology Notes.pdf</a></li>
+            </ul>
+            <h3>PPTs</h3>
+            <ul class="file-list">
+                <li><a href="#">Sociology PPT.pptx</a></li>
+            </ul>
+            <h3>Images</h3>
+            <ul class="file-list">
+                <li><a href="#">Anatomy Diagram.png</a></li>
+            </ul>
+            <h3>Videos</h3>
+            <ul class="file-list">
+                <li><a href="#">Physiology Lecture.mp4</a></li>
+            </ul>
+        </section>
+
+        <!-- Daily Study Updates Section -->
+        <section id="updates" class="section">
+            <h2>Daily Study Updates</h2>
+            <div class="update-feed">
+                <p><strong>Update:</strong> Today's topic is Anatomy - Respiratory System. Don't forget to review the notes!</p>
+                <p><strong>Reminder:</strong> Assignment on Sociology is due tomorrow.</p>
+            </div>
+        </section>
+
+        <!-- Study Routine Section -->
+        <section id="planner" class="section">
+            <h2>Study Planner</h2>
+            <div class="study-planner">
+                <input type="text" placeholder="Enter topic to study">
+                <input type="datetime-local" placeholder="Select date and time">
+                <textarea placeholder="Add notes or reminders"></textarea>
+                <button>Add to Planner</button>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
